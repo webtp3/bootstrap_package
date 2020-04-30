@@ -6,10 +6,10 @@
         <f:render partial="Menu/SkipNavigation" arguments="{_all}" />
         <f:if condition="{menu -> f:count()} > 1">
             <f:then>
-                <ul>
+                <ul class="nav subnav-nav nav-section">
                     <f:for each="{menu}" as="page">
-                        <li>
-                            <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">{page.title}</a>
+                        <li class="subnav-item">
+                            <a href="{page.link}"  class="subnav-link" {f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">{page.title}</a>
                             <f:render section="Menu" arguments="{page: page}" />
                         </li>
                     </f:for>
@@ -27,11 +27,11 @@
 <f:section name="Menu">
 
     <f:if condition="{page.content}">
-        <ul>
-            <f:for each="{page.content}" as="element">
+        <ul class="nav subnav-nav nav-section">
+        <f:for each="{page.content}" as="element">
                 <f:if condition="{element.data.header}">
-                    <li>
-                        <a href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.subheader}">{element.data.header}</a>
+                    <li class="subnav-item">
+                        <a href="{page.link}#c{element.data.uid}" class="subnav-link"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.subheader}">{element.data.header}</a>
                     </li>
                 </f:if>
             </f:for>

@@ -4,10 +4,10 @@
 
     <f:if condition="{content}">
         <f:render partial="Menu/SkipNavigation" arguments="{_all}" />
-        <ul>
+			<ul class="nav subnav-nav nav-section">
             <f:for each="{content}" as="element">
-                <li>
-                    <f:link.page pageUid="{element.data.pid}" section="{element.data.uid}" title="{element.data.header}">{element.data.header}</f:link.page>
+                <li class="subnav-item">
+                    <f:link.page pageUid="{element.data.pid}" class="subnav-link" section="{element.data.uid}" title="{element.data.header}">{element.data.header}</f:link.page>
                 </li>
             </f:for>
         </ul>

@@ -1,5 +1,5 @@
 {
-    "name": "bk2k/bootstrap-package",
+    "name": "web-tp3/bootstrap-package",
     "type": "typo3-cms-extension",
     "description": "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.",
     "keywords": [

@@ -11,10 +11,10 @@
 <f:section name="Menu">
 
     <f:if condition="{menu}">
-        <ul>
+			<ul class="nav subnav-nav nav-sitemap">
             <f:for each="{menu}" as="page">
-                <li>
-                    <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">{page.title}</a>
+                <li class="subnav-item sitemap_section {page.title}">
+                    <a href="{page.link}" class="subnav-link"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">{page.title}</a>
                     <f:render section="Menu" arguments="{menu: page.children}" />
                 </li>
             </f:for>

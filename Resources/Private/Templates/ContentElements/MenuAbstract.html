@@ -4,10 +4,11 @@
 
     <f:if condition="{menu}">
         <f:render partial="Menu/SkipNavigation" arguments="{_all}" />
-        <ul>
+        <ul class="nav subnav-nav nav-section">
             <f:for each="{menu}" as="page">
-                <li>
-                    <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">{page.title}</a>
+                <li class="subnav-item">
+                    <a href="{page.link}" class="subnav-link" {f:if(condition: page.target, then: ' target="{page.target}"')}
+                    title="{page.title}">{page.title}</a>
                     <f:if condition="{page.data.abstract}">
                         <f:format.html>{page.data.abstract}</f:format.html>
                     </f:if>

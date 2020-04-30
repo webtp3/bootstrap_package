@@ -6,6 +6,8 @@
     <f:if condition="{item.data.background_image_options.parallax}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-parallax</f:variable></f:if>
     <f:if condition="{item.data.background_image_options.fade}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-fade</f:variable></f:if>
     <f:if condition="{item.data.background_image_options.filter}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-{item.data.background_image_options.filter}</f:variable></f:if>
+	<f:if condition="{item.data.background_image_options.speed}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-{item.data.background_image_options.speed}</f:variable></f:if>
+	<f:link.typolink parameter="{item.data.link}" additionalAttributes="{draggable:'false'}">
     <div class="carousel-backgroundimage-container">
         <div id="{backgroundImageIdentifier}" class="{backgroundImageClasses}">
             <f:variable name="styles" value=""/>

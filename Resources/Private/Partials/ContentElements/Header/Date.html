@@ -2,6 +2,7 @@
 <f:if condition="{date}">
     <p class="{positionClass}">
         <time datetime="{date -> f:format.date(format: '%Y-%m-%d')}"><f:format.date format="{format}">{date}</f:format.date></time>
+        <meta itemprop="dateCreated" content="{date -> f:format.date(format: 'Y-m-d H:i:s')}" />
     </p>
 </f:if>
 </html>
